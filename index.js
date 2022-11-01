@@ -144,15 +144,15 @@ const getRandomPosts = async (
     if (
       typeof post.data !== 'undefined' &&
       typeof post.data.url !== 'undefined' &&
-      utils.isImageUrl(post.data.url, includeGif)
+//       utils.isImageUrl(post.data.url, includeGif)
     ) {
-      if (post.data.over_18) {
-        if (allowNSFW) {
-          fetchedPost.push(utils.formatPost(post.data, type));
-        }
-      } else {
+//       if (post.data.over_18) {
+//         if (allowNSFW) {
+//           fetchedPost.push(utils.formatPost(post.data, type));
+//         }
+//       } else {
         fetchedPost.push(utils.formatPost(post.data, type));
-      }
+//       }
     }
   });
 
